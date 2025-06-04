@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'next_page.dart'; // Replace with your actual main screen
+import 'home_page.dart'; // Replace with your actual main screen
 
 class ScanToProtectScreen extends StatelessWidget {
   const ScanToProtectScreen({super.key});
@@ -122,7 +122,7 @@ class ScanToProtectScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const NextPage(),
+                      builder: (context) => const HomeScreen(),
                     ),
                   );
                 },
