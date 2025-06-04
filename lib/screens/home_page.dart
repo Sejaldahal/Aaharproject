@@ -65,32 +65,117 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // Article card
               Container(
+                width: double.infinity, // Makes the card take full width
                 decoration: BoxDecoration(
                   color: Color(0xFFFFF6EF),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Row(
                   children: [
-                    Text("ARTICLE", style: TextStyle(color: Colors.redAccent, letterSpacing: 1)),
-                    SizedBox(height: 8),
-                    Text(
-                      "The pros and cons\nof packaged food.",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 12),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.redAccent,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    // Left side content
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("ARTICLE", style: TextStyle(color: Colors.redAccent, letterSpacing: 1)),
+                          SizedBox(height: 8),
+                          Text(
+                            "The pros and cons\nof packaged food.",
+                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 12),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.redAccent,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            ),
+                            child: Text("Read Now"),
+                          ),
+                        ],
                       ),
-                      child: Text("Read Now"),
+                    ),
+
+                    SizedBox(width: 16),
+
+                    // Right side image
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/packaged_food.png'), // Replace with your image path
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
               ),
+
+              // // Article card
+              // Container(
+              //   width: double.infinity, // Makes the card take full width
+              //   decoration: BoxDecoration(
+              //     color: Color(0xFFFFF6EF),
+              //     borderRadius: BorderRadius.circular(20),
+              //   ),
+              //   padding: const EdgeInsets.all(16),
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text("ARTICLE", style: TextStyle(color: Colors.redAccent, letterSpacing: 1)),
+              //       SizedBox(height: 8),
+              //       Text(
+              //         "The pros and cons\nof packaged food.",
+              //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              //       ),
+              //       SizedBox(height: 12),
+              //       ElevatedButton(
+              //         onPressed: () {},
+              //         style: ElevatedButton.styleFrom(
+              //           backgroundColor: Colors.redAccent,
+              //           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              //         ),
+              //         child: Text("Read Now"),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+
+              // // Article card
+              // Container(
+              //   decoration: BoxDecoration(
+              //     color: Color(0xFFFFF6EF),
+              //     borderRadius: BorderRadius.circular(20),
+              //   ),
+              //   padding: const EdgeInsets.all(16),
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text("ARTICLE", style: TextStyle(color: Colors.redAccent, letterSpacing: 1)),
+              //       SizedBox(height: 8),
+              //       Text(
+              //         "The pros and cons\nof packaged food.",
+              //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              //       ),
+              //       SizedBox(height: 12),
+              //       ElevatedButton(
+              //         onPressed: () {},
+              //         style: ElevatedButton.styleFrom(
+              //           backgroundColor: Colors.redAccent,
+              //           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              //         ),
+              //         child: Text("Read Now"),
+              //       ),
+              //     ],
+              //   ),
+              // ),
 
               SizedBox(height: 20),
 
