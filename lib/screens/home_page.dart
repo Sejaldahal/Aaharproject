@@ -1,6 +1,6 @@
-//
 // import 'package:flutter/material.dart';
 // import 'scan_page.dart';
+// import 'article_page.dart'; // Add this import
 //
 // class HomeScreen extends StatefulWidget {
 //   const HomeScreen({Key? key}) : super(key: key);
@@ -65,7 +65,7 @@
 //
 //               // Article card
 //               Container(
-//                 width: double.infinity, // Makes the card take full width
+//                 width: double.infinity,
 //                 decoration: BoxDecoration(
 //                   color: Color(0xFFFFF6EF),
 //                   borderRadius: BorderRadius.circular(20),
@@ -87,12 +87,18 @@
 //                           ),
 //                           SizedBox(height: 12),
 //                           ElevatedButton(
-//                             onPressed: () {},
+//                             onPressed: () {
+//                               // Navigate to ArticlePage
+//                               Navigator.push(
+//                                   context,
+//                                   MaterialPageRoute(builder: (_) => ArticlePage())
+//                               );
+//                             },
 //                             style: ElevatedButton.styleFrom(
 //                               backgroundColor: Colors.redAccent,
 //                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
 //                             ),
-//                             child: Text("Read Now"),
+//                             child: Text("Read Now", style: TextStyle(color: Colors.white)),
 //                           ),
 //                         ],
 //                       ),
@@ -108,7 +114,7 @@
 //                         decoration: BoxDecoration(
 //                           borderRadius: BorderRadius.circular(15),
 //                           image: DecorationImage(
-//                             image: AssetImage('assets/images/packaged_food.png'), // Replace with your image path
+//                             image: AssetImage('assets/images/packaged_food.png'),
 //                             fit: BoxFit.cover,
 //                           ),
 //                         ),
@@ -117,7 +123,7 @@
 //                   ],
 //                 ),
 //               ),
-//              SizedBox(height: 20),
+//               SizedBox(height: 20),
 //
 //               // Scan Now card
 //               GestureDetector(
@@ -149,6 +155,7 @@
 //                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
 //                         ),
 //                         child: Row(
+//                           mainAxisSize: MainAxisSize.min,
 //                           children: [
 //                             Text("Scan Now"),
 //                             Icon(Icons.arrow_forward_ios, size: 16),
@@ -166,9 +173,13 @@
 //     );
 //   }
 // }
+
+//}
+
 import 'package:flutter/material.dart';
 import 'scan_page.dart';
-import 'article_page.dart'; // Add this import
+import 'article_page.dart';
+import 'nutrient_assistant_chat_page.dart'; // Import the assistant chat page
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -186,7 +197,6 @@ class _HomeScreenState extends State<HomeScreen> {
     });
 
     if (index == 1) {
-      // Navigate to Scan page when QR scanner icon is tapped
       Navigator.push(context, MaterialPageRoute(builder: (_) => ScanPage()));
     }
   }
@@ -203,6 +213,19 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => ChatbotPage()),
+          );
+        },
+        backgroundColor: Colors.green,
+        child: Icon(Icons.chat),
+        tooltip: "Nutrient Assistant",
+      ),
+
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -256,7 +279,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           SizedBox(height: 12),
                           ElevatedButton(
                             onPressed: () {
-                              // Navigate to ArticlePage
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(builder: (_) => ArticlePage())
@@ -291,6 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
+
               SizedBox(height: 20),
 
               // Scan Now card
@@ -341,3 +364,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
