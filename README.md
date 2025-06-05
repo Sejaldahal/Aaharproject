@@ -94,9 +94,6 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -110,11 +107,10 @@ For support, email support@aahar.app or join our community discussions.
 
 ## 📈 Roadmap
 
-- [ ] Nutrition tracking and meal planning
 - [ ] Integration with fitness apps
 - [ ] Recipe suggestions based on dietary preferences
 - [ ] Multi-language support
-- [ ] Offline mode for cached products
+
 
 ---
 
