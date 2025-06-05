@@ -25,7 +25,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
   // API Keys (only needed if using external APIs)
   static const String _cohereApiKey = 'SthW1BkodkiOUvIzg49LHtxtbsncbc21sq8VecUG'; // Get from cohere.ai
   static const String _cohereUrl = 'https://api.cohere.ai/v1/generate';
-  static const String _huggingFaceUrl = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium';
+  //static const String _huggingFaceUrl = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium';
 
   @override
   void initState() {
@@ -61,10 +61,10 @@ class _ChatbotPageState extends State<ChatbotPage> {
         // Cohere API
           response = await _callCohere(message);
           break;
-        case 3:
-        // Hugging Face API
-          response = await _callHuggingFace(message);
-          break;
+        // case 3:
+        // // Hugging Face API
+        //   response = await _callHuggingFace(message);
+        //   break;
         default:
           response = _getSimpleResponse(message);
       }
@@ -222,36 +222,36 @@ class _ChatbotPageState extends State<ChatbotPage> {
     }
   }
 
-  // Option 3: Hugging Face API Integration
-  Future<String> _callHuggingFace(String message) async {
-    final headers = {
-      'Content-Type': 'application/json',
-    };
-
-    final body = json.encode({
-      'inputs': message,
-      'parameters': {
-        'max_length': 100,
-        'temperature': 0.7,
-      }
-    });
-
-    final response = await http.post(
-      Uri.parse(_huggingFaceUrl),
-      headers: headers,
-      body: body,
-    );
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      if (data is List && data.isNotEmpty) {
-        return data[0]['generated_text'].toString().trim();
-      }
-      return "I'm learning how to help better. Could you try rephrasing your question?";
-    } else {
-      throw Exception('Failed to get response from Hugging Face');
-    }
-  }
+  // // Option 3: Hugging Face API Integration
+  // Future<String> _callHuggingFace(String message) async {
+  //   final headers = {
+  //     'Content-Type': 'application/json',
+  //   };
+  //
+  //   final body = json.encode({
+  //     'inputs': message,
+  //     'parameters': {
+  //       'max_length': 100,
+  //       'temperature': 0.7,
+  //     }
+  //   });
+  //
+  //   final response = await http.post(
+  //     Uri.parse(_huggingFaceUrl),
+  //     headers: headers,
+  //     body: body,
+  //   );
+  //
+  //   if (response.statusCode == 200) {
+  //     final data = json.decode(response.body);
+  //     if (data is List && data.isNotEmpty) {
+  //       return data[0]['generated_text'].toString().trim();
+  //     }
+  //     return "I'm learning how to help better. Could you try rephrasing your question?";
+  //   } else {
+  //     throw Exception('Failed to get response from Hugging Face');
+  //   }
+  // }
 
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -288,7 +288,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
             itemBuilder: (context) => [
               PopupMenuItem(value: 1, child: Text("Simple Bot (Offline)")),
               PopupMenuItem(value: 2, child: Text("Cohere API")),
-              PopupMenuItem(value: 3, child: Text("Hugging Face API")),
+              //PopupMenuItem(value: 3, child: Text("Hugging Face API")),
             ],
           ),
         ],
