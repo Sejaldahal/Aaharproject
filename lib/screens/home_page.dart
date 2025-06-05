@@ -978,7 +978,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
   int _botType = 1;
 
   // API Keys (only needed if using external APIs)
-  static const String _cohereApiKey = 'YOUR_COHERE_API_KEY_HERE'; // Get from cohere.ai
+  static const String _cohereApiKey = 'SthW1BkodkiOUvIzg49LHtxtbsncbc21sq8VecUG'; // Get from cohere.ai
   static const String _cohereUrl = 'https://api.cohere.ai/v1/generate';
   static const String _huggingFaceUrl = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium';
 
