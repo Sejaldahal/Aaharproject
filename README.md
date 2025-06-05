@@ -36,6 +36,28 @@ Help users make quick, informed, and healthy food choices by providing instant a
 - **Theme Customization**: Dark mode and other visual preferences
 - **History Tracking**: Keep track of scanned products and insights
 
+## 📱 App Interface Preview
+
+Scroll through the interface screenshots below to get a quick overview of the app design and flow.
+
+<div style="display: flex; overflow-x: auto; gap: 10px;">
+  <img src="interface/1.jpg" width="200"/>
+  <img src="interface/2.jpg" width="200"/>
+  <img src="interface/3.jpg" width="200"/>
+  <img src="interface/4.jpg" width="200"/>
+  <img src="interface/5.jpg" width="200"/>
+  <img src="interface/6.jpg" width="200"/>
+  <img src="interface/7.jpg" width="200"/>
+  <img src="interface/8.jpg" width="200"/>
+  <img src="interface/9.jpg" width="200"/>
+  <img src="interface/10.jpg" width="200"/>
+  <img src="interface/11.jpg" width="200"/>
+  <img src="interface/12.jpg" width="200"/>
+  <img src="interface/13.jpg" width="200"/>
+  <img src="interface/14.jpg" width="200"/>
+  <img src="interface/15.jpg" width="200"/>
+</div>
+
 ## 🚀 Getting Started
 
 ### Prerequisites
