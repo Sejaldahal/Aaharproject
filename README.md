@@ -1,6 +1,6 @@
 # Aahar 🍎📱
 
-*Make smart food choices instantly*
+*Know what you eat*
 
 Aahar is a comprehensive Flutter app that empowers users to make informed and healthy food decisions through intelligent barcode scanning and personalized dietary insights.
 
