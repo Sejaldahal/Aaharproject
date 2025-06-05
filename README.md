@@ -41,7 +41,7 @@ Help users make quick, informed, and healthy food choices by providing instant a
 Scroll through the interface screenshots below to get a quick overview of the app design and flow.
 
 <div style="display: flex; overflow-x: auto; gap: 10px;">
-  <img src="interface/1.jpg" width="200"/>
+  <img src="interface/1.jpeg" width="200"/>
   <img src="interface/2.jpg" width="200"/>
   <img src="interface/3.jpg" width="200"/>
   <img src="interface/4.jpg" width="200"/>
