@@ -1,6 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'scan_page.dart';
-// import 'article_page.dart'; // Add this import
+// import 'article_page.dart';
+// import 'nutrient_assistant_chat_page.dart'; // Import the assistant chat page
 //
 // class HomeScreen extends StatefulWidget {
 //   const HomeScreen({Key? key}) : super(key: key);
@@ -18,7 +19,6 @@
 //     });
 //
 //     if (index == 1) {
-//       // Navigate to Scan page when QR scanner icon is tapped
 //       Navigator.push(context, MaterialPageRoute(builder: (_) => ScanPage()));
 //     }
 //   }
@@ -35,6 +35,19 @@
 //           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
 //         ],
 //       ),
+//
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {
+//           Navigator.push(
+//             context,
+//             MaterialPageRoute(builder: (_) => ChatbotPage()),
+//           );
+//         },
+//         backgroundColor: Colors.green,
+//         child: Icon(Icons.chat),
+//         tooltip: "Nutrient Assistant",
+//       ),
+//
 //       body: SafeArea(
 //         child: Padding(
 //           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -88,7 +101,6 @@
 //                           SizedBox(height: 12),
 //                           ElevatedButton(
 //                             onPressed: () {
-//                               // Navigate to ArticlePage
 //                               Navigator.push(
 //                                   context,
 //                                   MaterialPageRoute(builder: (_) => ArticlePage())
@@ -123,6 +135,7 @@
 //                   ],
 //                 ),
 //               ),
+//
 //               SizedBox(height: 20),
 //
 //               // Scan Now card
@@ -173,13 +186,15 @@
 //     );
 //   }
 // }
+//
+//
 
-//}
 
 import 'package:flutter/material.dart';
 import 'scan_page.dart';
 import 'article_page.dart';
-import 'nutrient_assistant_chat_page.dart'; // Import the assistant chat page
+import 'nutrient_assistant_chat_page.dart'; // Assistant Chat Page
+import 'user_profile_page.dart'; // User Profile Page
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -198,6 +213,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (index == 1) {
       Navigator.push(context, MaterialPageRoute(builder: (_) => ScanPage()));
+    } else if (index == 2) {
+      Navigator.push(context, MaterialPageRoute(builder: (_) => UserProfilePage()));
     }
   }
 
@@ -280,8 +297,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ElevatedButton(
                             onPressed: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (_) => ArticlePage())
+                                context,
+                                MaterialPageRoute(builder: (_) => ArticlePage()),
                               );
                             },
                             style: ElevatedButton.styleFrom(
@@ -364,5 +381,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
