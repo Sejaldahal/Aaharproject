@@ -105,6 +105,10 @@ The app requires the following permissions:
 5. **Stay Informed**: Read daily articles about healthy eating
 6. **Customize Profile**: Set your dietary preferences and health goals
 
+## 🎥 App Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
 
 ## 🤝 Contributing
 
