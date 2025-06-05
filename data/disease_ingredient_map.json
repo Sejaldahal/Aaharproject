@@ -1,0 +1,70 @@
+{
+  "diabetes": [
+    "high fructose corn syrup",
+    "corn syrup",
+    "glucose syrup",
+    "sugar",
+    "sucrose",
+    "fructose",
+    "dextrose",
+    "maltose",
+    "brown sugar",
+    "cane sugar",
+    "refined sugar",
+    "invert sugar",
+    "maple syrup",
+    "honey"
+  ],
+  "hypertension": [
+    "salt",
+    "sodium chloride",
+    "sodium nitrate",
+    "sodium nitrite",
+    "msg",
+    "monosodium glutamate",
+    "sodium benzoate",
+    "sodium phosphate",
+    "baking soda",
+    "sodium bicarbonate"
+  ],
+  "cholesterol": [
+    "trans fat",
+    "partially hydrogenated oil",
+    "hydrogenated oil",
+    "saturated fat",
+    "palm oil",
+    "coconut oil",
+    "lard",
+    "shortening",
+    "butter",
+    "beef fat",
+    "pork fat"
+  ],
+  "gluten_intolerance": [
+    "wheat",
+    "barley",
+    "rye",
+    "gluten",
+    "wheat flour",
+    "all purpose flour",
+    "bread flour",
+    "malt",
+    "semolina",
+    "bulgur",
+    "spelt",
+    "durum wheat"
+  ],
+  "pregnancy": [
+    "alcohol",
+    "caffeine",
+    "raw fish",
+    "unpasteurized cheese",
+    "unpasteurized milk",
+    "artificial sweeteners",
+    "aspartame",
+    "saccharin",
+    "high mercury fish",
+    "raw meat",
+    "raw eggs"
+  ]
+}
