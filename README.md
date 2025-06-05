@@ -1,4 +1,4 @@
-# Aahar 🍎📱
+# Aahar 📱
 
 *Know what you eat*
 
