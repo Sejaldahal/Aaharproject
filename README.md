@@ -83,26 +83,6 @@ The app requires the following permissions:
 5. **Stay Informed**: Read daily articles about healthy eating
 6. **Customize Profile**: Set your dietary preferences and health goals
 
-## 🏗️ Project Structure
-
-```
-lib/
-├── main.dart
-├── screens/
-│   ├── scanner/
-│   ├── profile/
-│   ├── articles/
-│   └── chatbot/
-├── services/
-│   ├── barcode_service.dart
-│   ├── openfoodfacts_service.dart
-│   └── ai_service.dart
-├── models/
-│   ├── food_product.dart
-│   └── user_profile.dart
-├── widgets/
-└── utils/
-```
 
 ## 🤝 Contributing
 
